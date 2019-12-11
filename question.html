@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+	<style>
+		
+		body,h1,h2,h3,p,li,ul,div,section,input {margin:0; padding:0;}
+		html{font-family: 'Noto Sans KR', sans-serif;}
+		section{height:80vh; position: relative; text-align: center;}
+		section h2{width:70%; font-size: 30px; font-weight: 700;position: absolute;
+					left:15%;top:40vh;text-align: center; color:white;}
+		section .box{ position: absolute; top:60vh; width:100%; text-align: center; font-size: 24px; font-weight: 900; }
+		section .box label{ vertical-align: middle; }
+		section .box input[type="radio"]{width:20px; height:20px;}
+		.s1{background: gray;}
+		.s2{background: gray;}
+		.s3{background: gray;}
+		.s4{background: gray;}
+		.s5{height: 5vh;}
+		.d1{width:50%;background:#D8D8D8; text-align: center; }
+		#but{position: absolute; left:35%; top:0vh; width:30%; text-align: center; font-size: 17px; font-weight: 900; background: gray; border-radius: 20px;}
+		#monitor{position: absolute; left:35%; top:0vh; width:30%; text-align: center; font-size: 24px; font-weight: 900; background: gray}
+		#h1{ background: #585858; display: inline-block; border-radius: 30px;}
+
+	
+	</style>
+</head>
+<body>
+	<section class="s1">
+	<h2 id="h1">
+		내가 선호하는 포지션은?
+	</h2>
+	<div class="box">
+		<label>
+			<input type="radio" name="q1" value="a" class="radio1">
+			공격수
+			<input type="radio" name="q1" value="b" class="radio1">
+			미드필더
+			<input type="radio" name="q1" value="c" class="radio1">
+			수비수/골키퍼
+		</label>
+	</div>
+    </section>
+    <section class="s2">
+    	<h2 id="h1">
+    		나의 발볼 사이즈는?
+    	</h2>
+    	<div class="box">
+    		<input type="radio" name="q2" value="d" class="radio2">
+    		넓은 편
+    		<input type="radio" name="q2" value="e" class="radio2">
+    		좁은 편
+    		<input type="radio" name="q2" value="f" class="radio2">
+    		상관없음
+    	</div>
+    </section>
+    <section class="s3">
+    	<h2 id="h1">
+    		축구화 선호 무게는?
+    	</h2>
+    	<div class="box">
+    		<input type="radio" name="q3" value="g" class="radio3">
+    		가벼움
+    		<input type="radio" name="q3" value="h" class="radio3">
+    		무거움
+    		<input type="radio" name="q3" value="i" class="radio3">
+    		상관없음
+    	</div>
+    </section>
+    <section class="s4">
+    	<h2 id="h1">
+    		화려함VS심플함
+    	</h2>
+    	<div class="box">
+    		<input type="radio" name="q4" value="j" class="radio4">
+    		화려한 디자인
+    		<input type="radio" name="q4" value="k" class="radio4">
+    		심플한 디자인
+    	</div>
+    </section>
+    <section class="s5">
+    	<button id="but">나의 축구화는?!</button>
+    </section>
+    <script type="text/javascript">
+    	but.onclick = function(){
+    		var t = document.getElementsByClassName("radio1");
+    		for(var i=0; i<3; i++){
+    			if(t[i].checked == true){
+    				if(i == 0){
+    					var q1Value = "a";
+    				}else if(i == 1){
+    					var q1Value = "b";
+    				}else if(i == 2){
+    					var q1Value = "c";
+    				}
+    			}
+    		}	
+    		var t = document.getElementsByClassName("radio2");
+    		for(var i=0; i<3; i++){
+    			if(t[i].checked == true){
+    				if(i == 0){
+    					var q2Value = "d";
+    				}else if(i == 1){
+    					var q2Value = "e";
+    				}else if(i == 2){
+    					var q2Value = "f";
+    				}
+    			}	
+    		}
+    		var t = document.getElementsByClassName("radio3");
+    		for(var i=0; i<3; i++){
+    			if(t[i].checked == true){
+    				if(i == 0){
+    					var q3Value = "g";
+    				}else if(i == 1){
+    					var q3Value = "h";
+    				}else if(i == 2){
+    					var q3Value = "i";
+    				}
+    			}	
+    		}
+    		var t = document.getElementsByClassName("radio4");
+    		for(var i=0; i<2; i++){
+    			if(t[i].checked == true){
+    				if(i == 0){
+    					var q4Value = "j";
+    				}else if(i == 1){
+    					var q4Value = "k";
+    				}
+    			}	
+    		}
+console.log(q1Value, q2Value, q3Value, q4Value);
+    		if( q1Value == "a" ){
+	if(q2Value == "d"){
+		if(q3Value == "g"){
+			if(q4Value == "j"){
+
+				window.open('future.html')
+		    }else if(q4Value = "k"){
+			    window.open('venom.html')
+		}
+		}else if(q3Value == "h"){
+			if(q4Value == "j"){
+				window.open('predator.html')
+		    }else if(q4Value = "k"){
+			    window.open('predatorblack.html')
+		}
+		}else if(q3Value == "i"){
+			if(q4Value == "j"){
+				window.open('venom.html')
+		    }else if(q4Value = "k"){
+			    window.open('venomblack.html')
+		}
+	}
+    }else if(q2Value == "e"){
+		if(q3Value == "g"){
+			if(q4Value == "j"){
+				window.open('X.html')
+		    }else if(q4Value = "k"){
+			    window.open('mercurial.html')
+		}
+		}else if(q3Value == "h"){
+			if(q4Value == "j"){
+				window.open('nemeziz.html')
+		    }else if(q4Value = "k"){
+			    window.open('copa.html')
+		}
+		}else if(q3Value == "i"){
+			if(q4Value == "j"){
+				window.open('nemeziz.html')
+		    }else if(q4Value = "k"){
+			    window.open('one.html')
+		}
+	}
+    }else if(q2Value == "f"){
+		if(q3Value == "g"){
+			if(q4Value == "j"){
+				window.open('X.html')
+		    }else if(q4Value = "k"){
+			    window.open('mercurial.html')
+		}
+		}else if(q3Value == "h"){
+			if(q4Value == "j"){
+				window.open('future.html')
+		    }else if(q4Value = "k"){
+			    window.open('one.html')
+		}
+		}else if(q3Value == "i"){
+			if(q4Value == "j"){
+				window.open('X.html')
+		    }else if(q4Value = "k"){
+			    window.open('mercurial.html')
+		}
+}
+}
+}else if(q1Value == "b"){
+	if(q2Value == "d"){
+		if(q3Value == "g"){
+			if(q4Value == "j"){
+				window.open('nemeziz.html')
+		    }else if(q4Value = "k"){
+			    window.open('vision.html')
+		}
+		}else if(q3Value == "h"){
+			if(q4Value == "j"){
+				window.open('one.html')
+		    }else if(q4Value = "k"){
+			    window.open('predatorblack.html')
+		}
+		}else if(q3Value == "i"){
+			if(q4Value == "j"){
+				window.open('vision.html')
+		    }else if(q4Value = "k"){
+			    window.open('predatorblack.html')
+		}
+	}
+    }else if(q2Value == "e"){
+		if(q3Value == "g"){
+			if(q4Value == "j"){
+				window.open('nemeziz.html')
+		    }else if(q4Value = "k"){
+			    window.open('visionblack.html')
+		}
+		}else if(q3Value == "h"){
+			if(q4Value == "j"){
+				window.open('vision.html')
+		    }else if(q4Value = "k"){
+			    window.open('predatorblack.html')
+		}
+		}else if(q3Value == "i"){
+			if(q4Value == "j"){
+				window.open('vision.html')
+		    }else if(q4Value = "k"){
+			    window.open('predatorblack.html')
+		}
+	}
+    }else if(q2Value == "f"){
+		if(q3Value == "g"){
+			if(q4Value == "j"){
+				window.open('nemeziz.html')
+		    }else if(q4Value = "k"){
+			    window.open('visionblack.html')
+		}
+		}else if(q3Value == "h"){
+			if(q4Value == "j"){
+				window.open('future.html')
+		    }else if(q4Value = "k"){
+			    window.open('predatorblack.html')
+		}
+		}else if(q3Value == "i"){
+			if(q4Value == "j"){
+				window.open('vision.html')
+		    }else if(q4Value = "k"){
+			    window.open('predatorblack.html')
+			}
+}
+}
+}else if(q1Value == "c"){
+	if(q2Value == "d"){
+		if(q3Value == "g"){
+			if(q4Value == "j"){
+				window.open('vision.html')
+		    }else if(q4Value = "k"){
+			    window.open('visionblack.html')
+		}
+		}else if(q3Value == "h"){
+			if(q4Value == "j"){
+				window.open('copa.html')
+		    }else if(q4Value = "k"){
+			    window.open('tiempo.html')
+		}
+		}else if(q3Value == "i"){
+			if(q4Value == "j"){
+				window.open('one.html')
+		    }else if(q4Value = "k"){
+			    window.open('tiempo.html')
+		}
+	}
+    }else if(q2Value == "e"){
+		if(q3Value == "g"){
+			if(q4Value == "j"){
+				window.open('nemeziz.html')
+		    }else if(q4Value = "k"){
+			    window.open('visionblack.html')
+		}
+		}else if(q3Value == "h"){
+			if(q4Value == "j"){
+				window.open('vision.html')
+		    }else if(q4Value = "k"){
+			    window.open('predatorblack.html')
+		}
+	    }else if(q3Value == "i"){
+			if(q4Value == "j"){
+				window.open('future.html')
+		    }else if(q4Value = "k"){
+			    window.open('predatorblack.html')
+		}
+	}
+    }else if(q2Value == "f"){
+		if(q3Value == "g"){
+			if(q4Value == "j"){
+				window.open('nemeziz.html')
+		    }else if(q4Value = "k"){
+			    window.open('visionblack.html')
+		}
+		}else if(q3Value == "h"){
+			if(q4Value == "j"){
+				window.open('copa.html')
+			}else if(q4Value = "k"){
+			    window.open('tiempo.html')
+			}
+		}else if(q3Value == "i"){
+			if(q4Value == "j"){
+				window.open('copa.html')
+		    }else if(q4Value = "k"){
+			    window.open('tiempo.html')
+			}
+		}
+	}
+}}   
+    </script>
+</body>
+</html>
